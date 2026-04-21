@@ -1,4 +1,4 @@
 fastapi
 uvicorn
-rdkit
+rdkit-pypi
 pydantic
