@@ -1,0 +1,25 @@
+<div id="app"></div>
+<script>
+  fetch("http://127.0.0.1:8000/api/convert-xyz", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      xyz_data: `10
+generated molecule
+C 0.552827 0.675806 0.00193
+C -0.835096 0.503879 -0.080803
+H 0.898265 1.699748 0.135987
+H -1.445638 1.417445 -0.181827
+C 1.547418 -0.435838 -0.02291
+H 1.04632 -1.404496 -0.096584
+H 2.206514 -0.321384 -0.895532
+H 2.197977 -0.433086 0.861327
+O -1.471979 -0.678075 -0.027539
+H -0.718495 0.003289 1.007645`,
+    }),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      document.getElementById("app").innerHTML = data.svg;
+    });
+</script>
