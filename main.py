@@ -10,7 +10,7 @@ app = FastAPI(title="XYZ to Molecule API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://cheminformatics-nextjs.onrender.com"], 
+    allow_origins=["*"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
